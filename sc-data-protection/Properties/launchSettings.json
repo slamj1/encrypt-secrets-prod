@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "sc-data-protection": {
+      "commandName": "Project",
+      "commandLineArgs": "CreateNewRSACertificate\r\n\"c:\\temp\\test3.pfx\" \"TestPassword\""
+    }
+  }
+}

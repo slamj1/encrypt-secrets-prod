@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "poc3", "poc3\poc3.csproj", "{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{1FBABFD3-362A-470C-8AA5-6FA16B91C23B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sc-data-protection", "sc-data-protection\sc-data-protection.csproj", "{C9B09ABE-5158-4EA7-870D-35D28E8C972D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SCCryptoLib", "SCCryptoLib\SCCryptoLib.csproj", "{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DEVLinux|Any CPU = DEVLinux|Any CPU
+		PRODLinux|Any CPU = PRODLinux|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TESTLinux|Any CPU = TESTLinux|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.DEVLinux|Any CPU.ActiveCfg = DEVLinux|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.DEVLinux|Any CPU.Build.0 = DEVLinux|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.PRODLinux|Any CPU.ActiveCfg = PRODLinux|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.PRODLinux|Any CPU.Build.0 = PRODLinux|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.TESTLinux|Any CPU.ActiveCfg = TESTLinux|Any CPU
+		{E79814E7-98F0-4DE5-A7B8-36D9FF19E6B1}.TESTLinux|Any CPU.Build.0 = TESTLinux|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.DEVLinux|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.DEVLinux|Any CPU.Build.0 = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.PRODLinux|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.PRODLinux|Any CPU.Build.0 = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.TESTLinux|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D}.TESTLinux|Any CPU.Build.0 = Debug|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.DEVLinux|Any CPU.ActiveCfg = DEVLinux|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.DEVLinux|Any CPU.Build.0 = DEVLinux|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.PRODLinux|Any CPU.ActiveCfg = PRODLinux|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.PRODLinux|Any CPU.Build.0 = PRODLinux|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.TESTLinux|Any CPU.ActiveCfg = TESTLinux|Any CPU
+		{04EABD52-0FA2-4336-9D0F-BF4CBCDD7544}.TESTLinux|Any CPU.Build.0 = TESTLinux|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9B09ABE-5158-4EA7-870D-35D28E8C972D} = {1FBABFD3-362A-470C-8AA5-6FA16B91C23B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B11406C2-C795-473A-8209-809925B567FB}
+	EndGlobalSection
+EndGlobal

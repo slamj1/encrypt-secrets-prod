@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;DEVLinux;TESTLinux;PRODLinux</Configurations>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="..\..\secrets\poc3\secrets.DEVLinux.json" Link="secrets.DEVLinux.json">
+			<IsTransformFile>true</IsTransformFile>
+			<DependentUpon>secrets.json</DependentUpon>
+		</Content>
+		<Content Include="..\..\secrets\poc3\secrets.json" Link="secrets.json">
+			<TransformOnBuild>true</TransformOnBuild>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="..\..\secrets\poc3\secrets.PRODLinux.json" Link="secrets.PRODLinux.json">
+			<IsTransformFile>true</IsTransformFile>
+			<DependentUpon>secrets.json</DependentUpon>
+		</Content>
+		<Content Include="..\..\secrets\poc3\secrets.TESTLinux.json" Link="secrets.TESTLinux.json">
+			<IsTransformFile>true</IsTransformFile>
+			<DependentUpon>secrets.json</DependentUpon>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah" Version="4.0.30">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="5.0.1" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SCCryptoLib\SCCryptoLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.Debug.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Update="appsettings.DEVLinux.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Update="appsettings.json">
+      <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Update="appsettings.PRODLinux.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Update="appsettings.Release.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+    <None Update="appsettings.TESTLinux.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -20,14 +20,14 @@
  
  ***         ***
  
- Usage Example: 
-	.\deploy-poc2.ps1 poc2 DEVLinux net6.0 s.morreel C:\Users\slam\.ssh\saasy_ssh_key "" "<cert password here>" ""
+ Usage Example. You'll have to setup a keypair to authenticate with the SSH server:
+	.\deploy-poc.ps1 poc3 DEVLinux net6.0 <ssh username> <ssh user private key> "" "<systemd cert password here>" ""
 
 #>
 param(
     [Parameter(Mandatory=$True, ValueFromPipeline=$true)]
     [System.String]
-	[ValidateSet("poc2", "poc3")]
+	[ValidateSet("poc3")]
     $Application,
 	
 	[Parameter(Mandatory=$True, ValueFromPipeline=$true)]
@@ -64,7 +64,7 @@ param(
 
 Import-Module .\modules\CryptoLib.psm1 
 
-# Make sure these settings follow your enviroment setup
+# Make sure these settings follow your enviroment setup. These are the defaults.
 $DefaultDrive = "d:"
 $DefaultSecretsOutputDirectory = "\dev\secrets-deploy"
 $UnEncryptedSecretsFilename = "secrets.json"
@@ -78,6 +78,7 @@ $PrivateCertsDirPerms = "0500"
 $TempDirPerms = "0700"
 
 # The sc-data-protection project should be compiled into an exe for use on the deploy workstation. This is built separately
+# Check you pathing for this, depending on where you clone the repo to.
 $DataProtectionExePath = "\dev\encrypt-secrets-prod\sc-data-protection\bin\Debug\net6.0\sc-data-protection.exe"
 
 $settings = @{
@@ -94,10 +95,11 @@ $settings = @{
 		 }
 	}
 	
+# Change these to your remote target server's ips
 $environments = @{
 	DEVLinux = 
 		@{
-			TargetServer = "192.168.10.45"
+			TargetServer = "<your server ip here>"
 		 }
     TESTLinux = 
 		@{

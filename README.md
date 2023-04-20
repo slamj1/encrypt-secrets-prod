@@ -1,5 +1,7 @@
 # Introduction 
 This repo contains a fully working proof of concept for encrypting secrets in any environment, especially production.
+The POC uses systemd (*Nix only), self-signed certificates and AES symmetric keys. There is an automated PowerShell script (cross platform) to deploy 
+the application to a remote Linux box using SSH.
 
 A full instructional HD video is available on YouTube here https://youtu.be/MSb9HF25P5c
 

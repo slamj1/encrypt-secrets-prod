@@ -6,6 +6,8 @@ This repo contains a fully working proof of concept for encrypting secrets in an
 
 A full instructional HD video is available on YouTube here https://youtu.be/MSb9HF25P5c
 
+**DISCLAIMER: This is a proof of concept only. Do not use verbatim for production. Make sure to code reveiw accordingly**
+
 # Getting Started
 Prerequisites:
 
@@ -75,11 +77,11 @@ semodule -i sc-systemd-creds.pp
 
 Certificate manager and AES/RSA encryption:
 
-https://github.com/damienbod/AspNetCoreCertificates - Damien Bowden (Microsoft MVP)
+https://github.com/damienbod/AspNetCoreCertificates - Damien Bowden (Microsoft MVP)  
 https://damienbod.com/2020/08/19/symmetric-and-asymmetric-encryption-in-net-core/
 
-systemd-creds:
-https://www.freedesktop.org/software/systemd/man/systemd-creds.html
+systemd-creds:  
+https://www.freedesktop.org/software/systemd/man/systemd-creds.html  
 https://systemd.io/CREDENTIALS/
 
 

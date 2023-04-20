@@ -46,23 +46,23 @@ WantedBy=multi-user.target
 
 # Commands used in the video
 
-Installing PowerShell on Windows from cli:
+**Installing PowerShell on Windows from cli:**
 
 winget install --id Microsoft.Powershell --source winget
 
-Install PowerShell on Linux:
+**Install PowerShell on Linux:**
 
 dnf install https://github.com/PowerShell/PowerShell/releases/download/v7.3.3/powershell-7.3.3-1.rh.x86_64.rpm
 
-Add Linux service account:
+**Add Linux service account:**
 
 useradd -s /sbin/nologin poc3
 
-Encrypt contents of file using system-creds:
+**Encrypt contents of file using system-creds:**
 
 systemd-creds encrypt -p --name=poc3 tmppass-poc3.txt –
 
-SeLinux commands for adding the custom module:
+**SeLinux commands for adding the custom module:**
 
 Setenforce 0
 mkdir /sc-selinux && cd /sc-selinux

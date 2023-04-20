@@ -4,7 +4,7 @@ A working POC for encrypting secrets ion any environment, including production
 # Introduction 
 This repo contains a fully working proof of concept for encrypting secrets in any environment, especially production.
 
-A full instructional video is available on YouTube here <insert link>
+A full instructional HD video is available on YouTube here (https://youtu.be/MSb9HF25P5c)
 
 # Getting Started
 Prerequisites:

@@ -21,7 +21,8 @@ Prerequisites:
 # Build and Test
 1. Clone this repo.
 2. Adjust the path and target server settings in the provided script to match your environment.
-3. Follow the instructions in the video!
+3. Make sure your secrets relative path directory is setup correctly and put your secrets json files there.
+4. Follow the instructions in the video!
 
 # Starter Linux service file from the video
 ```

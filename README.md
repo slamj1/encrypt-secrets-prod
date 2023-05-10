@@ -1,14 +1,16 @@
-# encrypt-secrets-prod
-A working POC for encrypting secrets ion any environment, including production
-
 # Introduction 
 This repo contains a fully working proof of concept for encrypting secrets in any environment, especially production.
+The POC uses systemd (*Nix only), self-signed certificates and AES symmetric keys. There is an automated PowerShell script (cross platform) to deploy 
+the application to a remote Linux box using SSH.
+
+No more production secrets in source code control!
 
 A full instructional HD video is available on YouTube here https://youtu.be/MSb9HF25P5c
 
 **DISCLAIMER: This is a proof of concept only. Do not use verbatim for production. Make sure to code reveiw accordingly**
 
-# Getting Started
+# Getting Started  
+
 Prerequisites:
 
 - Visual Studio 2022 (any edition)
@@ -20,7 +22,7 @@ Prerequisites:
 - SSH fully setup on the remote Linux box
 
 
-# Build and Test
+# Build and Test  
 1. Clone this repo.
 2. Adjust the path and target server settings in the provided script to match your environment.
 3. Make sure your secrets relative path directory is setup correctly and put your secrets json files there.

@@ -298,11 +298,11 @@ CreateRemoteDirs $s $RemotePrivateDirectory $RemoteCertsDirectory $settings.$App
 
 # We need to temporarily change owenership so we can do stuff on the remote
 Write-Output "Changing ownership to $SSHUser...`n" | Write-Green
-$command="sudo chown -R $SSHUser`:$SSHUser $BaseRemotePrivateDirectory $BaseRemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
+$command="sudo chown -R $SSHUser`:$SSHUser $RemotePrivateDirectory $RemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
 $sb = [Scriptblock]::Create($command)
 Invoke-Command -Session $s -ScriptBlock $sb
 
-$command="sudo chmod $TempDirPerms -R $BaseRemotePrivateDirectory $BaseRemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
+$command="sudo chmod $TempDirPerms -R $RemotePrivateDirectory $RemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
 $sb = [Scriptblock]::Create($command)
 Invoke-Command -Session $s -ScriptBlock $sb
 
@@ -321,10 +321,10 @@ $sb = [Scriptblock]::Create($command)
 Invoke-Command -Session $s -ScriptBlock $sb
 
 Write-Output "Changing ownership / permissions back to $ServiceAccount for $RemotePrivateDirectory, $RemoteCertsDirectory...`n" | Write-Green
-$command="sudo chown -R $ServiceAccount`:$ServiceAccount $BaseRemotePrivateDirectory $BaseRemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
+$command="sudo chown -R $ServiceAccount`:$ServiceAccount $RemotePrivateDirectory $RemoteCertsDirectory $($settings.$Application.RemoteBackendDirectory)"
 $sb = [Scriptblock]::Create($command)
 Invoke-Command -Session $s -ScriptBlock $sb
-$command="sudo chmod $PrivateCertsDirPerms -R $BaseRemotePrivateDirectory $BaseRemoteCertsDirectory"
+$command="sudo chmod $PrivateCertsDirPerms -R $RemotePrivateDirectory $RemoteCertsDirectory"
 $sb = [Scriptblock]::Create($command)
 Invoke-Command -Session $s -ScriptBlock $sb
 

@@ -7,7 +7,7 @@ No more production secrets in source code control!
 
 A full instructional HD video is available on YouTube here https://youtu.be/MSb9HF25P5c
 
-**DISCLAIMER: This is a proof of concept only. Do not use verbatim for production. Make sure to code reveiw accordingly**
+**DISCLAIMER: This is a proof of concept only. Do not use verbatim for production. Make sure to code review accordingly**
 
 # Getting Started  
 

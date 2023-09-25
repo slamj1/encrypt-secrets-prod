@@ -69,10 +69,10 @@ systemd-creds encrypt -p --name=poc3 tmppass-poc3.txt –
 
 **SeLinux commands for adding the custom module:**
 
-Setenforce 0
-mkdir /sc-selinux && cd /sc-selinux
-audit2allow -a -M sc-systemd-creds
-semodule -i sc-systemd-creds.pp
+Setenforce 0  
+mkdir /sc-selinux && cd /sc-selinux  
+audit2allow -a -M sc-systemd-creds  
+semodule -i sc-systemd-creds.pp  
 
 
 # Useful info links
